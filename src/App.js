@@ -13,23 +13,11 @@ function App() {
     
     <NavBar />
         <Routes>
-          {/* <Route exact path='/'>
-            
-            <Home />
-          </Route>
-          <Route  exact path='/checkout' > 
-            <Checkout />
-          </Route> */}
-        <Route  path='/' element={<Home />}/>
-          
+          <Route  path='/' element={<Home />}/> 
         </Routes>
         <Routes>
-        <Route  exact path='/checkout' element={<Checkout />}/> 
-            
-          
+          <Route  exact path='/checkout' element={<Checkout />}/>  
         </Routes>
-
-      
     </div>
     </Router>
   );

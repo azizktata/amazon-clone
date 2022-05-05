@@ -46,7 +46,7 @@ export default function NavBar() {
                     onChange={handleChange}
                     sx={{height:"40px"}}
                 >
-                {categories.map(name => <MenuItem value={name}>{name}</MenuItem>)}
+                {categories.map((name,index) => <MenuItem key={index} value={name}>{name}</MenuItem>)}
                 </Select>
                 </FormControl>
                 </div>

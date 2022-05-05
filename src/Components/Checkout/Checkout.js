@@ -3,32 +3,26 @@ import "./Checkout.css"
 import NumberFormat from 'react-number-format';
 import { useStateValue } from '../../StateProvider';
 import { getBasketTotal } from '../../reducer';
+import BasketItem from '../Basket_item/Basket_item';
 export default function Checkout() {
   const [{basket}, dispatch ] = useStateValue();
+  
   return (
     <div className='checkout'>
         <div className='checkout-left'>
             <h3>Votre panier</h3>
             {/* basket item*/}
             {basket.map((item)=>{
-              const {id, title, img, price, rating} = item
+              
               return(
-                <div className='basket-item' key={id}>
-                  <div className='product-img'>
-                  <img className='product-img' src={img} alt="img" />
-                  </div>
-                  <div className='product-info'>
-                    <p>{title}</p>
-                    <p className='price'><small>$</small><strong>{price}</strong></p>
-                    <div className='rating'>
-                        {Array(rating).fill().map((_, i)=>(
-                            <span>⭐</span>
-                        ))}
-                    </div>
-                    <button >Delete from basket</button> 
-                    </div>
-                </div>
-
+                <BasketItem 
+                id={item.id}
+                  key={item.id}
+                    title={item.title}
+                    img={item.img}
+                    price={item.price}
+                    rating={item.rating}
+                />
               )
             })}
             
