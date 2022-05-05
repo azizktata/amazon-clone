@@ -7,22 +7,27 @@ import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 import MenuIcon from '@mui/icons-material/Menu';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
+import { useStateValue } from '../../StateProvider';
+import { NavLink } from 'react-router-dom';
+
 export default function NavBar() {
     const  categories = ["toutes nos categories", "sport et loisirs", "jeux et videos", "chaussures et sacs", "High Tech"]
     const [categorie, setCategorie] = React.useState('toutes nos categories');
     const handleChange = (event) => {
         setCategorie(event.target.value);
       }; 
+    const [{basket}, dispatch] = useStateValue();
   return (
     <div className='navbar'>
         
         <div className='nav-belt'>
-            
+            <NavLink to="/">
             <img 
                 className='logo'
                 src='http://pngimg.com/uploads/amazon/amazon_PNG11.png' 
                 alt='logo'
             />
+            </NavLink>
             <div className='location'>
                 <LocationOnIcon />
                 <div className='header__option'>
@@ -68,8 +73,8 @@ export default function NavBar() {
 
             </div>
             <div className='header-panier'>
-                <ShoppingBasketIcon/>
-                <span className='basket-count'>0</span>
+               <NavLink  to="/checkout" style={{color: "white"}}> <ShoppingBasketIcon/></NavLink>
+                <span className='basket-count'>{basket?.length}</span>
 
             </div>
             
