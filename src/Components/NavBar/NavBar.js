@@ -8,7 +8,8 @@ import Select from '@mui/material/Select';
 import MenuIcon from '@mui/icons-material/Menu';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import { useStateValue } from '../../StateProvider';
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
+import { auth } from "../../firebase";
 
 export default function NavBar() {
     const  categories = ["toutes nos categories", "sport et loisirs", "jeux et videos", "chaussures et sacs", "High Tech"]
@@ -16,7 +17,7 @@ export default function NavBar() {
     const handleChange = (event) => {
         setCategorie(event.target.value);
       }; 
-    const [{basket}, dispatch] = useStateValue();
+    const [{basket, user}, dispatch] = useStateValue();
   return (
     <div className='navbar'>
         
@@ -57,11 +58,13 @@ export default function NavBar() {
                 <button className='search-icon'><SearchIcon/></button>
             </div>
             <div className='header-nav'>
+                <Link to={!user && '/login'}>
                 <div className='header__option'>
-                    <span className='header__optionLineOne'>hello guest</span>
-                    <span className='header__optionLineTwo'>sign in</span>
+                    <span className='header__optionLineOne'>{user ? "hello user":"guest"}</span>
+                    <span  className='header__optionLineTwo'>{user ? <span onClick={()=>{auth.signOut()}}>Sign-out</span>:"Sign-in"}</span>
 
                 </div>
+                </Link>
                 <div className='header__option'>
                     <span className='header__optionLineOne'>Retours</span>
                     <span className='header__optionLineTwo'> &ordes</span>

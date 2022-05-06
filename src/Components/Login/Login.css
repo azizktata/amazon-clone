@@ -1,0 +1,80 @@
+.login{
+    background-color: white;
+    height:100vh;
+}
+
+.login-page{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 45%;
+   
+    width: 18%;
+    margin-left: 40%;
+   padding-top: 5%;
+    min-width:390px ;
+}
+.login-page .logo{
+    width: 150px;
+    
+}
+.log-in-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    border: 1px solid lightgray ;
+    border-radius: 5px;
+    padding: 2%;
+}
+.log-in-box h2{
+    width: 70%;
+}
+.log-in-box p{
+    line-height: normal;
+    width: fit-content;
+    font-size: small;
+    width: 70%;
+}
+.sign-in-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 75%;
+    
+}
+.input{
+    margin: 5% 0%;
+   width: 100%;
+    display: block;
+}
+.input input{
+    width: 97%;
+    height: 0.6cm;
+}
+.input input::selection{
+    box-shadow: 1px rgb(229, 171, 65);
+}
+.sign-in-form label{
+    width: 100%;
+    display: block;
+    font-size:medium;
+    font-weight: bold;
+}
+.create-btn{
+    width: 75%;
+    height: 4ch;
+    margin: 4% 0%;
+    cursor: pointer;
+}
+.sign-in-btn{
+    background: #f0c14b;
+    border-color: #a88734 #9c7e31 #846a29;
+    color: #111;
+    height: 4ch;
+    cursor: pointer;
+    font-size: medium;
+
+}
