@@ -5,7 +5,7 @@ import { useStateValue } from '../../StateProvider';
 import { getBasketTotal } from '../../reducer';
 import BasketItem from '../Basket_item/Basket_item';
 export default function Checkout() {
-  const [{basket}, dispatch ] = useStateValue();
+  const [{basket} ] = useStateValue();
   
   return (
     <div className='checkout'>

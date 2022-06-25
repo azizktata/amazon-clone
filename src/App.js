@@ -10,7 +10,7 @@ import { useStateValue } from './StateProvider';
 import { auth } from "./firebase";
 
 function App() {
-  const [{}, dispatch ] = useStateValue();
+  const [ dispatch ] = useStateValue();
   
     useEffect(()=>{
       auth.onAuthStateChanged(authUser =>{
@@ -30,7 +30,7 @@ function App() {
       })
 
         
-    },[])
+    },[dispatch])
   return (
     <Router> 
       

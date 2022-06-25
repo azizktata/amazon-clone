@@ -17,7 +17,7 @@ export default function NavBar() {
     const handleChange = (event) => {
         setCategorie(event.target.value);
       }; 
-    const [{basket, user}, dispatch] = useStateValue();
+    const [{basket, user}] = useStateValue();
   return (
     <div className='navbar'>
         

@@ -5,7 +5,7 @@ import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import Product from '../Product/Product';
 export default function Home() {
     
-    const [data,setData] = useState(images)
+    const [data] = useState(images)
     const [index,setIndex] = useState(1)
   return (
     <div className='home'>
