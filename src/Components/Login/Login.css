@@ -17,7 +17,7 @@
 }
 .login-page .logo{
     width: 150px;
-    
+    margin-top: 50%;
 }
 .log-in-box{
     display: flex;

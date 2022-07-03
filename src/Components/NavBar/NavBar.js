@@ -58,7 +58,7 @@ export default function NavBar() {
                 <button className='search-icon'><SearchIcon/></button>
             </div>
             <div className='header-nav'>
-                <Link to={!user && '/login'}>
+                <Link to={!user && '/login'} style={{textDecoration:"none"}}>
                 <div className='header__option'>
                     <span className='header__optionLineOne'>{user ? "hello user":"guest"}</span>
                     <span  className='header__optionLineTwo'>{user ? <span onClick={()=>{auth.signOut()}}>Sign-out</span>:"Sign-in"}</span>
