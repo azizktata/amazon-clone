@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React from 'react'
 import { useStateValue } from '../../StateProvider';
 import "./Basket_item.css"

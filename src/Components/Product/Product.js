@@ -2,6 +2,7 @@ import React from 'react'
 import { useStateValue } from '../../StateProvider'
 import "./Product.css"
 export default function Product({id, title, img, price, rating}) {
+  // eslint-disable-next-line no-empty-pattern
   const [ {},dispatch] = useStateValue();
   
   const addToBasket = () =>{
