@@ -20,9 +20,11 @@ export default function NavBar() {
     const [{basket, user}] = useStateValue();
   return (
     <div className='navbar'>
-        
         <div className='nav-belt'>
-            <NavLink to="/">
+            <div className='nav-belt-section'>
+
+            
+        <NavLink to="/">
             <img 
                 className='logo'
                 src='http://pngimg.com/uploads/amazon/amazon_PNG11.png' 
@@ -57,6 +59,8 @@ export default function NavBar() {
                 />
                 <button className='search-icon'><SearchIcon/></button>
             </div>
+            </div>
+            <div className='nav-belt-section'>
             <div className='header-nav'>
                 <Link to={!user && '/login'} style={{textDecoration:"none"}}>
                 <div className='header__option'>
@@ -73,15 +77,17 @@ export default function NavBar() {
                     <span className='header__optionLineOne'>your</span>
                     <span className='header__optionLineTwo'>prime</span>
                 </div>
-
             </div>
+
+
             <div className='header-panier'>
                <NavLink  to="/checkout" style={{color: "white"}}> <ShoppingBasketIcon/></NavLink>
                 <span className='basket-count'>{basket?.length}</span>
 
             </div>
-            
+                </div>
         </div>
+       
         <div className='nav-main'>
             <div className='left'>
                 <div className='toutes'>

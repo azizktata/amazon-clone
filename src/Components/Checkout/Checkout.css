@@ -1,42 +1,39 @@
-.checkout{
-    display: flex;
-    
+.checkout {
+  display: flex;
 }
-h3{
-    border-bottom: 1px solid rgb(184, 182, 182);
-    height: 50px;
-    padding: 2% 7%;
-    margin-bottom: 5%;
+h3 {
+  height: 50px;
+  padding: 2% 7%;
+  margin-bottom: 5%;
 }
-.checkout-left{
-    height: 60%;
-    background-color: white;
-    flex-grow: 1;
+.checkout-left {
+  height: 60%;
+  background-color: white;
+  flex-grow: 1;
+  height: 100vh;
 }
-.checkout-right{
-    height: 200px;
-    width: 30%;
-    min-width: fit-content;
-    align-items: center;
-    
-    display: flex;
-    flex-direction: column;
-    border: 1px solid;
+.checkout-right {
+  height: 200px;
+  width: 30%;
+  min-width: fit-content;
+  align-items: center;
+
+  display: flex;
+  flex-direction: column;
 }
-.subtotal{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-   
+.subtotal {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-.subtotal button{
-    background: #f0c14b;
-    border: 1px solid;
-    border-color: #a88734 #9c7e31 #846a29;
-    color: #111;
-    height: 2rem;
-    width: 50%;
-    margin-top: 8%;
-    cursor: pointer;
+.subtotal button {
+  background: #f0c14b;
+  border: 1px solid;
+  border-color: #a88734 #9c7e31 #846a29;
+  color: #111;
+  height: 2rem;
+  width: 50%;
+  margin-top: 8%;
+  cursor: pointer;
 }
